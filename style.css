@@ -1,0 +1,101 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.date__container {
+  padding: 20px;
+  text-align: center;
+}
+
+.input {
+  padding: 15px;
+  width: 100px;
+  height: 150px;
+  font-size: 40px;
+  text-align: center;
+  outline: none;
+}
+
+#yare {
+  width: 150px;
+}
+
+.input::placeholder {
+  text-align: center;
+}
+
+.video__container {
+  position: relative;
+  padding: 0 0px 50% 10px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* aspect-ratio: 16 / 9; */
+}
+
+.video__container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video__controls {
+  position: fixed;
+  width: 100%;
+  color: #fff;
+  text-align: right;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.video__controls:hover {
+  opacity: 1;
+}
+
+.btn {
+  border: 1px solid #e2e2e2;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn img {
+  padding: 20px;
+  width: 120px;
+}
+
+#play-btn {
+  display: block;
+  margin: 40px auto 0; 
+  border-color: transparent;
+}
+
+#stop-btn {
+  margin: 5vh 2vw;
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  border-color: #ec1313;
+}
+
+@media screen and (max-width: 1280px) {
+  .video__container {
+    padding: 0 10px 55% 10px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .video__container {
+    padding: 0 10px 67% 10px;
+  }
+}
