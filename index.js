@@ -4,7 +4,19 @@ const video = document.querySelector('video');
 const playBtn = document.querySelector('#play-btn');
 const closeBtn = document.querySelector('#stop-btn');
 
+const checkDate = () => {
+  const day = document.querySelector('#day');
+  const mounth = document.querySelector('#mounth');
+  const yare = document.querySelector('#yare');
+  return !!(day && mounth && yare);
+};
+
 const startVideo = () => {
+  if (!checkDate()) {
+    console.log(checkDate())
+    return;
+  }
+
   videoContainer.classList.remove('hidden');
   dateContainer.classList.add('hidden');
   video.play();
