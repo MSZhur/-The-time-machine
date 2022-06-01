@@ -11,7 +11,6 @@ const validateDate = () => {
   const dayValue = +day.value;
   const mounthValue = +mounth.value;
   const yareValue = +yare.value;
-  debugger;
   return !!(dayValue >= 1 && dayValue <= 31 && mounthValue <= 12 && mounthValue >= 1 && yareValue <= 2022); 
 };
 
@@ -44,7 +43,7 @@ const checkYare = (value) => {
 };
 
 const dayChange = (e) => {
-  if (!checkDay(e.target.value)) {
+  if (!checkDay(e.target.value || !e.target.value)) {
     day.classList.add('error');
   } else {
     day.classList.remove('error');
@@ -52,7 +51,7 @@ const dayChange = (e) => {
 };
 
 const mounthChange = (e) => {
-  if (!checkMounth(e.target.value)) {
+  if (!checkMounth(e.target.value || !e.target.value)) {
     mounth.classList.add('error');
   } else {
     mounth.classList.remove('error');
