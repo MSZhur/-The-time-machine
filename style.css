@@ -34,9 +34,9 @@
   /* aspect-ratio: 16 / 9; */
 }
 
-.video-container iframe, 
-.video-container object, 
-.video-container embed  {
+.video__container iframe, 
+.video__container object, 
+.video__container embed  {
   position: absolute;
   top: 0;
   left: 0;
