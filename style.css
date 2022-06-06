@@ -4,10 +4,10 @@
   box-sizing: border-box;
 }
 .body {
-		background: #020609 url(./assets/img/25zcqlyavqg.jpg); /* Фоновый цвет и фоновый рисунок*/
-		background-attachment: fixed; /* Фон страницы фиксируется */
-		background-repeat: repeat-x; /* Изображение повторяется по горизонтали */
-	}
+  background: #020609 url(./assets/img/25zcqlyavqg.jpg); /* Фоновый цвет и фоновый рисунок*/
+  background-attachment: fixed; /* Фон страницы фиксируется */
+  background-repeat: repeat-x; /* Изображение повторяется по горизонтали */
+}
 
 .date__container {
   padding: 20px;
@@ -70,8 +70,11 @@
 }
 
 .btn img {
-  padding: 20px;
-  width: 120px;
+    width:75%;
+    max-width:200px;
+    min-width:144px;
+    padding: 15px 15px 19px 15px;
+    margin: 20px auto 50px auto;
 }
 
 #play-btn {
