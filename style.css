@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .body {
-  background: #020609 url(./assets/img/25zcqlyavqg.jpg); /* Фоновый цвет и фоновый рисунок*/
+  background: #020609 url(https://github.com/MSZhur/-The-time-machine/blob/master/assets/img/25zcqlyavqg.jpg); /* Фоновый цвет и фоновый рисунок*/
   background-attachment: fixed; /* Фон страницы фиксируется */
   background-repeat: repeat-x; /* Изображение повторяется по горизонтали */
 }
