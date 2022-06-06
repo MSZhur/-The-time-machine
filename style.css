@@ -12,6 +12,7 @@
 .date__container {
   padding: 20px;
   text-align: center;
+  margin: 20px auto 50px auto;
 }
 
 .input {
@@ -70,7 +71,6 @@
 }
 
 .btn img {
-    width:75%;
     max-width:200px;
     min-width:144px;
     padding: 15px 15px 19px 15px;
