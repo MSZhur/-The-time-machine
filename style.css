@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+.body {
+		background: #020609 url(./assets/img/25zcqlyavqg.jpg); /* Фоновый цвет и фоновый рисунок*/
+		background-attachment: fixed; /* Фон страницы фиксируется */
+		background-repeat: repeat-x; /* Изображение повторяется по горизонтали */
+	}
 
 .date__container {
   padding: 20px;
