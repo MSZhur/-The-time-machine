@@ -1,11 +1,13 @@
-const videoContainer = document.querySelector('.video__container');
+const videoContainer = document.querySelector('.video__wrapper');
 const dateContainer = document.querySelector('.date__container');
 const video = document.querySelector('video');
 const playBtn = document.querySelector('#play-btn');
-const closeBtn = document.querySelector('#stop-btn');
 const day = document.querySelector('#day');
 const mounth = document.querySelector('#mounth');
 const yare = document.querySelector('#yare');
+const body = document.querySelector('body');
+
+const player = videojs('#my-video');
 
 const validateDate = () => {
   const dayValue = +day.value;
@@ -16,10 +18,11 @@ const validateDate = () => {
 
 const startVideo = () => {
   if (!validateDate()) return;
-
   videoContainer.classList.remove('hidden');
-  dateContainer.classList.add('hidden');
-  video.play();
+  player.ready(function() {
+    player.requestFullscreen();
+    player.play();
+  });
 };
 
 const stopVideo = () => {
@@ -43,7 +46,7 @@ const checkYare = (value) => {
 };
 
 const dayChange = (e) => {
-  if (!checkDay(e.target.value || !e.target.value)) {
+  if (!checkDay(e.target.value)) {
     day.classList.add('error');
   } else {
     day.classList.remove('error');
@@ -51,7 +54,7 @@ const dayChange = (e) => {
 };
 
 const mounthChange = (e) => {
-  if (!checkMounth(e.target.value || !e.target.value)) {
+  if (!checkMounth(e.target.value)) {
     mounth.classList.add('error');
   } else {
     mounth.classList.remove('error');
@@ -59,15 +62,21 @@ const mounthChange = (e) => {
 };
 
 const yareChange = (e) => {
-  if (!checkYare(e.target.value) || !e.target.value) {
+  if (!checkYare(e.target.value)) {
     yare.classList.add('error');
   } else {
     yare.classList.remove('error');
   }
 };
 
+body.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    player.dispose();
+    stopVideo();
+  }
+});
+
 playBtn.addEventListener('click', startVideo);
-closeBtn.addEventListener('click', stopVideo);
 day.addEventListener('change', dayChange);
 mounth.addEventListener('change', mounthChange);
 yare.addEventListener('change', yareChange);
